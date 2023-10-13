@@ -4,6 +4,7 @@ public class Journal{
 
     public List<Entry>_entries = new List<Entry>();
     public string _userName;
+    public int _points;
 
     public void AddEntry(Entry entry){
         _entries.Add(entry);
@@ -14,5 +15,9 @@ public class Journal{
         {
             entry.DisplayEntry();
         }
+    }
+
+    public void AddPoints(int points){
+        _points += points;
     }
 }
