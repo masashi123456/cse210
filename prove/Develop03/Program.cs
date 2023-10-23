@@ -12,6 +12,32 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine();
+        
+
+        bool scriptstudy = true;
+        while (scriptstudy == true){
+        Console.WriteLine("Please enter to continue or press 'quit' to finish: ");
+        string trial = Console.ReadLine();
+          if(trial == ""){
+
+            scripture._reference.display();
+            scripture.ScriptureRandom();
+            scripture.DisplayScripture();
+            Console.WriteLine();
+            Console.WriteLine();
+          }
+
+          else if(trial == "quit"){
+                break;
+            }
+        
+
+        }
+        
+        
+
+        
+         
 
 
 

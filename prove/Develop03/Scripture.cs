@@ -3,6 +3,10 @@ public class Scripture{
     private string _scriptureText; // declare a variable 
     public Reference _reference;
     List<Word>_words = new  List<Word>();
+
+
+
+
     // List<int>numbers = new List<int>();
 
     public Scripture()
@@ -42,7 +46,8 @@ public class Scripture{
                 // Print an underscore for each character in the word
                 foreach(char character in word._wstring){
                     Console.Write("_");
-                }
+                } 
+                Console.Write(" ");
             }
             // If the word is not hidden, then just display the word as normal.
             else{
