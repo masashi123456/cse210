@@ -9,10 +9,10 @@ public class Scripture{
 
     // List<int>numbers = new List<int>();
 
-    public Scripture()
+    public Scripture(Reference reference, string scriptureText)
     {
-        this._reference = new Reference("Proverbs", "2", "5");
-        this._scriptureText = "And it came to pass that when my father had heard these words he was exceedingly glad, for he knew that I had been blessed of the Lord.";
+        this._reference = reference;
+        this._scriptureText = scriptureText;
         
         String[] Rword = _scriptureText.Split(" ");
         foreach (string word in Rword ){
