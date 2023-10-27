@@ -7,7 +7,11 @@
     
 
     
-    Elevator.ListAvailable();
+    elevator.doorClose();
+    elevator.dorrOpen();
+    elevator.callElevator();
+    elevator.listAvailable();
+
     
    }
 }

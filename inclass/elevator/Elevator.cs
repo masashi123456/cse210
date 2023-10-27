@@ -19,17 +19,24 @@ public class Elevator
     {
         return _floors;
     }
-    public bool doorClose()
+    public void doorClose()
     {
-        return false;
+        _doorOpen = false;
+        Console.WriteLine("The door is close");
     }
 
-    public bool doorOpen()
+    public void doorOpen()
     {
-        return true;
+        _doorOpen = true;
+        Console.WriteLine("The door is open");
     }
 
-    public void ListAvailable()
+    public void callElevator()
+    {
+        Console.WriteLine($"CallingElevator form {_NFloor} ToString Floor{_floors}");
+    }
+
+    public void listAvailable()
     {
         for (int i = 0; i < _floors.Count; i++)
         {
