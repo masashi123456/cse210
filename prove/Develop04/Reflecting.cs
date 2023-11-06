@@ -4,9 +4,6 @@ public class Reflecting : Activity{
         "Think of a time when you feel the spirit",
         "Think of a time when you achieve something you had never achieve",
         "Think of a time when you helped someone in need.",
-        "What could you learn from this experience that applies to other situations?",
-        "What did you learn about yourself through this experience?",
-        "How can you keep this experience in mind in the future?",
     };
 
     private List<string>_question = new List<string>(){
@@ -15,6 +12,9 @@ public class Reflecting : Activity{
         "What did you learn from the experience?",
         "Why was this experience meaningful to you?",
         "What made this time different than other times when you were not as successful?",
+        "How can you keep this experience in mind in the future?",
+        "What did you learn about yourself through this experience?",
+        "What could you learn from this experience that applies to other situations?",
     };
     
     public List<string>Prompt{
