@@ -91,5 +91,10 @@ public class Activity{
         Animation(4);
         Console.Clear();
     }
+
+    public void yRnd(){
+        Random random = new Random();
+        int rnd = random.Next(1,10);
+    }
     
 }

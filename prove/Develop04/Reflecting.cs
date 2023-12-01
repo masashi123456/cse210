@@ -28,7 +28,7 @@ public class Reflecting : Activity{
 
     public void ReflectAct(){
         Random random = new Random();
-        int rnd = random.Next(_prompt.Count);
+        int rnd = random.Next(_question.Count);
         int prnd = random.Next(_question.Count);
         Animation(9);
         Console.WriteLine();

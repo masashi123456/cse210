@@ -1,4 +1,4 @@
-public class SmartLight : SmartDevice{
+public class SmartLight : Device{
 
     public SmartLight(string name) : base(name){
         
