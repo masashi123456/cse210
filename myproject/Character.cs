@@ -1,16 +1,17 @@
 public class Character{
     public string _name;    
     public int _life = 30;
-    public int _lifeMax = 35;
+    public int _lifeMax = 30;
     public int _attack = 5;
     public int _path = 0;
 
    
 
     public Character(){
-        Console.WriteLine("What is the name of the Character?");
-        string Name = Console.ReadLine();
-        _name = Name;
+        Console.WriteLine("What is your name?");
+        string name = Console.ReadLine();
+        _name = name;
+        Console.WriteLine($"{_name}, Let's enjoy the adventure!!");
     }
 
 
