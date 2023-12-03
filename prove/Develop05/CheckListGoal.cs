@@ -3,14 +3,17 @@ public class CheckListGoal : Goal
     protected int _repsRequired;
     public int RepsRequired{
         get{return _repsRequired;}
+        set{_repsRequired = value;}
     }
     protected int _repsCompleted = 0;
     public int RepsCompleted{
         get{return _repsCompleted;}
+        set{_repsCompleted = value;}
     }
     protected int _bonusPoints;
     public int BonusPoints{
-        get{return BonusPoints;}
+        get{return _bonusPoints;}
+        set{_addPoints = value;}
     }
     public override void PromptUser()
     {

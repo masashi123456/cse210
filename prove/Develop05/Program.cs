@@ -52,7 +52,7 @@ class Program
             }
             // Load File
             else if (userChoice == "4"){
-
+                LoadFile();
             }
 
             // Record Goal
@@ -117,6 +117,53 @@ class Program
             }
         }
 
+    }
+
+    static void LoadFile(){
+       
+        
+        Console.WriteLine("From which file do you want to load a data?" );
+        string filename = Console.ReadLine();
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        //reset the list of goals.
+        goals.Clear();
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(",");
+            // make a new goal.
+                // Create a new simple goal
+                if (parts[0] == "SimpleGoal"){
+                    SimpleGoal simpleGoal = new SimpleGoal(); // create simpleGoal object
+                    simpleGoal.Name = parts[1];    // get all the information from the user. do this each time
+                    simpleGoal.Description = parts[2];
+                    simpleGoal.Points = int.Parse(parts[3]);   
+                    goals.Add(simpleGoal);  // add object to the list of goals to save it for later
+                }
+                // Eternal Goal
+                if (parts[0] == "EternalGoal"){
+                    EternalGoal eternalGoal = new EternalGoal(); // create simpleGoal object
+                    eternalGoal.Name = parts[1];    // get all the information from the user. do this each time
+                    eternalGoal.Description = parts[2];
+                    eternalGoal.Points = int.Parse(parts[3]);   
+                    goals.Add(eternalGoal);  // add object to the list of goals to save it for later
+                }
+                // CheckListGoal
+                if (parts[0] == "CheckListGoal"){
+                    CheckListGoal checkListGoal = new CheckListGoal(); // create simpleGoal object
+                    checkListGoal.Name = parts[1];    // get all the information from the user. do this each time
+                    checkListGoal.Description = parts[2];
+                    checkListGoal.BonusPoints= int.Parse(parts[3]);
+                    checkListGoal.RepsCompleted = int.Parse(parts[4]);
+                    checkListGoal.RepsRequired = int.Parse(parts[5]);
+                    checkListGoal.Points = int.Parse(parts[6]); 
+                    goals.Add(checkListGoal);  // add object to the list of goals to save it for later
+                }
+            //enter the goals  information from the pieces of parts.
+            //save the goal to the list.
+            
+        }
     }
 
 }
