@@ -7,22 +7,7 @@ public class Event{
         get {return _eventName;}
         set {_eventName = value;}
     }
-    public int _exp = 0;
-    public int EXP {
-        get {return _exp;}
-        set {_exp = value;}
-    }
-    public int _way = 0;
-
-
-    public Event(string eventname){
-        EventName = eventname; 
-    }
-
-    public void getEXP(int points){
-        EXP += points;
-        
-    }
+    
     public void DisplayBegin(){
         Console.WriteLine($"Welcome to the {EventName}");
         Console.WriteLine("-----------------------------");
@@ -31,13 +16,46 @@ public class Event{
     
     public void Animation(int times){
         int Atimes = 0;
+        Console.Write("_");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        while(Atimes < times){
+            
+
+            Console.Write("__");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+            Console.Write("___");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+            Console.Write("____");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            
+            Console.Write("_____");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+
+            Console.Write("______");
+            Thread.Sleep(1000);
+            Console.Write("\b \b");
+            Atimes +=5;
+            }
+            
+        Console.WriteLine();
+    } 
+
+        public void Animation2(int times){
+        int Atimes = 0;
         Console.Write("-");
         Thread.Sleep(1000);
         Console.Write("\b \b");
         while(Atimes < times){
             
 
-            Console.Write("\\");
+            Console.Write("/");
             Thread.Sleep(1000);
             Console.Write("\b \b");
 
@@ -45,7 +63,7 @@ public class Event{
             Thread.Sleep(1000);
             Console.Write("\b \b");
 
-            Console.Write("/");
+            Console.Write("\\");
             Thread.Sleep(1000);
             Console.Write("\b \b");
             
