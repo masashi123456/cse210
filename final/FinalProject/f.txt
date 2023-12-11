@@ -1,0 +1,1 @@
+Character,Name: 1,Life: 32,Attack Power: 0,totalpoints,11
